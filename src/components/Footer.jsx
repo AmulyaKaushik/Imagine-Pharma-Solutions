@@ -2,14 +2,14 @@
  * Footer — site-wide footer with company info, quick links, and contact.
  */
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, Globe } from 'lucide-react';
 import logo from '../assets/images/logo.jpeg';
 
 const QUICK_LINKS = [
   { label: 'Home',           path: '/'          },
   { label: 'About Us',       path: '/about'     },
   { label: 'Services',       path: '/services'  },
-  { label: 'Training',       path: '/training'  },
+  { label: 'Products',       path: '/products'  },
   { label: 'Career',         path: '/career'    },
   { label: 'Placement',      path: '/placement' },
   { label: 'Contact',        path: '/contact'   },
@@ -104,14 +104,20 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="tel:+919999285915" className="flex items-center gap-2 text-slate-300 hover:text-teal-400 text-sm transition-colors duration-200">
+              <a href="tel:+917042112854" className="flex items-center gap-2 text-slate-300 hover:text-teal-400 text-sm transition-colors duration-200">
                 <Phone className="w-4 h-4 flex-shrink-0 text-teal-500" />
-                +91 99992 85915 — Dr. Anuj Rathi
+                +91 70421 12854 — Dr. Anuj Kumar Rathi
               </a>
             </li>
             <li className="flex items-start gap-2 text-slate-300 text-sm">
               <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-teal-500" />
-              <span>807, "Impereal One": Centre Point,<br />Rajnagar Extension, Ghaziabad,<br />Uttar Pradesh — 201017</span>
+              <span>Office 605, 6th Floor, Tower A,<br />Solitairian City Centre, Knowledge Park 3,<br />Greater Noida, Uttar Pradesh — 201308</span>
+            </li>
+            <li>
+              <a href="https://www.imaginepharmasolutions.co.in" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-slate-300 hover:text-teal-400 text-sm transition-colors duration-200">
+                <Globe className="w-4 h-4 flex-shrink-0 text-teal-500" />
+                www.imaginepharmasolutions.co.in
+              </a>
             </li>
           </ul>
         </div>

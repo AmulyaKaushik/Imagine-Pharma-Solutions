@@ -24,39 +24,39 @@ const fadeUp = (delay = 0) => ({
 
 const SERVICES = [
   {
-    icon: FileText,
-    title: 'Resume Building',
-    desc: 'Craft a compelling, industry-standard resume that highlights your skills, experience, and pharma knowledge to stand out to recruiters.',
+    icon: Compass,
+    title: 'Career Pathways & Specialization',
+    desc: 'Expert guidance on career options in the pharmaceutical industry: academic research, industrial jobs, regulatory affairs, IPR, QA/QC, analytical chemistry, and specialized pharmaceutical domains.',
     color: 'from-primary-600 to-primary-800',
   },
   {
-    icon: MessageSquare,
-    title: 'Interview Preparation',
-    desc: 'Mock interviews, feedback sessions, and coaching on technical and HR questions tailored to pharmaceutical industry roles.',
+    icon: FileText,
+    title: 'Resume Building & Optimization',
+    desc: 'Craft a compelling, industry-standard resume that highlights your pharmaceutical skills, certifications, and research experience to stand out to top recruiters.',
     color: 'from-teal-500 to-teal-700',
   },
   {
-    icon: Compass,
-    title: 'Career Guidance',
-    desc: 'Personalised one-on-one sessions to map your ideal career path — from research roles to clinical, regulatory, or business functions.',
+    icon: MessageSquare,
+    title: 'Interview Preparation & Training',
+    desc: 'Comprehensive mock interviews, feedback sessions, and coaching on technical questions, case studies, and HR rounds tailored to pharma industry roles.',
     color: 'from-blue-500 to-blue-700',
   },
   {
     icon: GraduationCap,
-    title: 'Higher Education Counselling',
-    desc: 'Guidance on selecting the right postgraduate programs, universities, scholarships, and research fellowships in India and abroad.',
+    title: 'Higher Studies & Certifications',
+    desc: 'Guidance on postgraduate programs, advanced certifications (GMP, RAC), scholarships, research fellowships, and lifelong learning opportunities in India and abroad.',
     color: 'from-violet-500 to-violet-700',
   },
   {
     icon: Award,
-    title: 'Professional Certification',
-    desc: 'Expert advice on certifications like GMP, RAC (Regulatory Affairs Certification), and QC/QA credentials that boost employability.',
+    title: 'Industry Connection & Networking',
+    desc: 'Direct connections with pharmaceutical companies, CROs, CDMOs, and research organizations to explore job opportunities and career advancement.',
     color: 'from-amber-500 to-amber-700',
   },
   {
     icon: TrendingUp,
-    title: 'Leadership Development',
-    desc: 'From research associate to senior scientist and leadership roles — we chart a career roadmap aligned with your long-term ambitions.',
+    title: 'Career Roadmap Development',
+    desc: 'Personalized career planning from entry-level (Research Associate, Analyst) to senior positions (Senior Scientist, Manager) aligned with your long-term ambitions.',
     color: 'from-emerald-500 to-emerald-700',
   },
 ];
@@ -82,12 +82,12 @@ export default function Career() {
           }}
         />
         <div className="relative z-10 max-w-3xl mx-auto px-4 text-center">
-          <motion.span {...fadeUp()} className="text-teal-300 font-semibold text-sm uppercase tracking-widest">Career Support</motion.span>
+          <motion.span {...fadeUp()} className="text-teal-300 font-semibold text-sm uppercase tracking-widest">Career Counselling</motion.span>
           <motion.h1 {...fadeUp(0.1)} className="font-heading font-bold text-4xl md:text-5xl text-white mt-2">
-            Career Guidance for Pharma Professionals
+            Career Counselling & Professional Guidance
           </motion.h1>
           <motion.p {...fadeUp(0.2)} className="text-blue-200 text-lg mt-4">
-            Personalised counselling and practical tools to accelerate your pharmaceutical career.
+            Expert guidance on pharma career pathways, specializations, interview prep, and resume building to launch your pharmaceutical career.
           </motion.p>
         </div>
       </div>

@@ -52,17 +52,17 @@ const FEATURES = [
 const WHO_CAN_JOIN = [
   {
     title: 'B.Pharm / M.Pharm Students',
-    desc: 'Final-year or recently graduated pharmacy students looking to enter the pharmaceutical industry.',
+    desc: 'Final-year or recently graduated pharmacy students looking to launch careers in research, manufacturing, regulatory affairs, QA/QC, or related pharmaceutical domains.',
     icon: GraduationCap,
   },
   {
-    title: 'BSc / MSc Chemistry Graduates',
-    desc: 'Chemistry graduates seeking careers in pharma R&D, API manufacturing, quality control, or consulting.',
+    title: 'BSc / MSc Chemistry & Chemical Sciences',
+    desc: 'Undergraduate and postgraduate chemistry graduates seeking careers in pharma R&D, API synthesis, process development, analytical chemistry, quality control, and chemical manufacturing.',
     icon: FlaskConical,
   },
   {
-    title: 'Fresh Pharma Research Enthusiasts',
-    desc: 'Anyone with a passion for pharmaceutical research who wants structured training and placement support.',
+    title: 'Fresh Pharma Research Professionals',
+    desc: 'Students and early-career professionals with genuine passion for pharmaceutical research who want structured training, mentorship, and placement support to build industry-ready skills.',
     icon: Microscope,
   },
 ];
@@ -123,7 +123,7 @@ export default function Placement() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             title="Our Placement Process"
-            subtitle="A structured 5-step journey from enrolment to employment."
+            subtitle="A structured 5-step journey from enrollment to employment."
           />
           <div className="relative">
             {/* Connector line */}
@@ -148,7 +148,7 @@ export default function Placement() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
             title="Who Can Join?"
-            subtitle="Our placement programme is open to all pharmaceutical and chemistry graduates."
+            subtitle="Our placement program is open to all pharmaceutical and chemistry graduates."
           />
           <div className="grid md:grid-cols-3 gap-6">
             {WHO_CAN_JOIN.map(({ title, desc, icon: Icon }, i) => (

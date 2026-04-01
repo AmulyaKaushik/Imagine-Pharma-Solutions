@@ -3,7 +3,7 @@
  */
 import { useState } from 'react';
 import { motion }   from 'framer-motion';
-import { Mail, Phone, MapPin, Send, CheckCircle2 } from 'lucide-react';
+import { Mail, Phone, MapPin, Globe, Send, CheckCircle2 } from 'lucide-react';
 import SectionTitle from '../components/SectionTitle';
 
 const PageWrapper = ({ children }) => (
@@ -36,17 +36,24 @@ const CONTACT_INFO = [
   },
   {
     icon: Phone,
-    label: 'Dr. Anuj Rathi',
-    value: '+91 9999285915',
-    href: 'tel:+919999285915',
+    label: 'Dr. Anuj Kumar Rathi',
+    value: '+91 7042112854',
+    href: 'tel:+917042112854',
     color: 'from-blue-500 to-blue-700',
   },
   {
     icon: MapPin,
     label: 'Address',
-    value: '807, "Impereal One": Centre Point, Rajnagar Extension, Ghaziabad, UP – 201017',
-    href: 'https://maps.google.com/?q=Rajnagar+Extension+Ghaziabad+201017',
+    value: 'Office 605, 6th Floor, Tower A, Solitairian City Centre, Knowledge Park 3, Greater Noida, Uttar Pradesh - 201308, India',
+    href: 'https://maps.google.com/?q=Solitairian+City+Centre+Knowledge+Park+3+Greater+Noida+201308',
     color: 'from-emerald-500 to-emerald-700',
+  },
+  {
+    icon: Globe,
+    label: 'Website',
+    value: 'www.imaginepharmasolutions.co.in',
+    href: 'https://www.imaginepharmasolutions.co.in',
+    color: 'from-violet-500 to-violet-700',
   },
 ];
 
@@ -249,7 +256,7 @@ export default function Contact() {
           <motion.div {...fadeUp()} className="rounded-2xl overflow-hidden shadow-lg border border-slate-200">
             <iframe
               title="Imagine Pharma Solutions Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3498.3948989789!2d77.44085!3d28.69327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf1efc55555:0xabcdef123456!2sRajnagar%20Extension%2C%20Ghaziabad%2C%20Uttar%20Pradesh%20201017!5e0!3m2!1sen!2sin!4v1680000000000"
+              src="https://www.google.com/maps?q=Solitairian+City+Centre,+Knowledge+Park+3,+Greater+Noida,+Uttar+Pradesh+201308&output=embed"
               width="100%"
               height="400"
               style={{ border: 0 }}

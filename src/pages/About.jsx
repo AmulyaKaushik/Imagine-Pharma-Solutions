@@ -1,9 +1,9 @@
-/**
+git /**
  * About page — company story, mission, and directors
  */
 import { motion } from 'framer-motion';
 import { Link }   from 'react-router-dom';
-import { Phone, Mail, Award, Target, Lightbulb, Globe, ArrowRight } from 'lucide-react';
+import { Phone, Award, Target, Lightbulb, Globe, ArrowRight } from 'lucide-react';
 import SectionTitle from '../components/SectionTitle';
 
 /* Page transition wrapper */
@@ -28,19 +28,46 @@ const fadeUp = (delay = 0) => ({
 const DIRECTORS = [
   {
     name:  'Dr. Ashish Gupta',
-    role:  'Co-Founder & Director',
+    credentials: '(Ph.D. N.E.T. CSIR)',
+    role:  'Co-Founder & Director - API Process Development and Manufacturing',
     phone: '+91 8800619561',
-    img:   'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80',
-    bio:   'Renowned pharmaceutical scientist with deep expertise in drug discovery, process chemistry, and regulatory affairs.',
-    specialties: ['Drug Discovery', 'Process Chemistry', 'Regulatory Affairs'],
+    profile: [
+      'With over 20 years of extensive experience in Active Pharmaceutical Ingredient (API) synthesis, Dr. Ashish brings deep expertise in process development, route scouting, technology transfer, scale-up, and commercial manufacturing in the pharmaceutical industry.',
+      'He collaborates with pharmaceutical companies, CROs, CDMOs, and chemical manufacturers to develop robust, scalable, and cost-effective synthetic processes for APIs and complex intermediates.',
+      'He supports organizations in translating molecules from laboratory research to pilot and commercial-scale manufacturing while maintaining the highest standards of quality, safety, and regulatory compliance.',
+    ],
+    expertise: [
+      'Developed and optimized synthetic routes for a wide range of APIs and advanced intermediates.',
+      'Ensured process efficiency, regulatory compliance, and cost-effective production.',
+      'Guided projects from early-stage development to commercial-scale manufacturing.',
+      'Extensive experience in nitrosamine, genotoxic, and process risk assessment.',
+      'Expert in impurities identification, synthesis, isolation, and characterization in final APIs.',
+      'Developed novel synthetic routes for 25+ APIs.',
+      'Filed and was granted 35+ process patents, demonstrating technical leadership and innovation.',
+    ],
   },
   {
-    name:  'Dr. Anuj Rathi',
-    role:  'Co-Founder & Director',
-    phone: '+91 9999285915',
-    img:   'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=400&q=80',
-    bio:   'Pharmaceutical business strategist with extensive experience in API manufacturing and specialty chemical supply chains.',
-    specialties: ['API Manufacturing', 'Business Strategy', 'Specialty Chemicals'],
+    name:  'Dr. Anuj Kumar Rathi',
+    credentials: '(Ph.D. PDF, MBA, Legal Consultant)',
+    role:  'Co-Founder & Director - API R&D and Strategic Operations',
+    phone: '+91 7042112854',
+    profile: [
+      'A seasoned research professional with 19 years of industrial experience in synthetic organic chemistry, specializing in API R&D, process development, and scale-up.',
+      'He has proven expertise in designing and optimizing synthetic routes, driving projects from laboratory to commercialization, and leading cross-functional teams.',
+      'He holds a Ph.D. in Organic Chemistry and an MBA in Operations and Marketing, combining technical depth with strategic business acumen. He also completed postdoctoral research in Europe focused on synthetic organic chemistry, flow chemistry, and catalysis.',
+      'His legal consulting background strengthens regulatory affairs support, streamlines approvals, and aligns documentation with pharmaceutical and chemical industry standards.',
+      'He is committed to delivering practical, cost-effective, science-driven, and regulatory-compliant solutions that improve product quality, shorten development timelines, and enhance manufacturing performance.',
+    ],
+    expertise: [
+      'Synthetic chemistry: R&D, process development, and scale-up.',
+      'Medicinal chemistry and natural product chemistry.',
+      'Nanocatalysis and flow chemistry.',
+      'Drug discovery and development.',
+      'Extensive work on complex heterocyclic compounds, carbohydrates, metabolites, macrocycles, peptides, lipids, and chiral compounds.',
+      'Highly skilled in RFP evaluation (FTE, FFS), proposal development, route scouting, and end-to-end project execution.',
+      'Authored 37+ high-impact publications and served as a Visiting Scientist at the Polish Academy of Sciences, Warsaw.',
+      'Supports pharmaceutical companies in accelerating API development, key intermediate synthesis, and transition to commercial-scale production.',
+    ],
   },
 ];
 
@@ -79,22 +106,21 @@ export default function About() {
           <motion.div {...fadeUp()}>
             <span className="text-teal-600 font-semibold text-sm uppercase tracking-wider">Our Story</span>
             <h2 className="font-heading font-bold text-3xl text-primary-900 mt-2 mb-5">
-              Redefining Pharmaceutical Education & Industry Services
+              Imagine Pharma Research Training, Career Counselling & Placement Centre
             </h2>
             <p className="text-slate-600 leading-relaxed mb-4">
-              Imagine Pharma Solutions was founded with a clear purpose: to close the widening
-              gap between what universities teach and what the pharmaceutical industry needs.
-              Our founders — both accomplished scientists and educators — identified a critical
-              shortage of industry-ready talent in the pharma sector.
+              Imagine Pharma Solutions was founded with a clear mission: to help students and professionals in the pharmaceutical field build sustainable careers. We identified a critical gap between academic education and industry requirements — and created a comprehensive ecosystem to bridge it.
             </p>
             <p className="text-slate-600 leading-relaxed mb-4">
-              Today, we operate as a multifaceted organisation providing pharmaceutical research
-              training, professional career counselling, business consulting, and the manufacturing
-              and trading of APIs, intermediates, and specialty chemicals.
+              <strong>Our Three Core Pillars:</strong>
             </p>
+            <ul className="text-slate-600 leading-relaxed mb-4 space-y-1.5 ml-4">
+              <li className="flex gap-2"><span className="text-teal-600">•</span> <strong>Pharma Research Training:</strong> Advanced programs in drug discovery, chemical synthesis, regulatory affairs, QA/QC, and IP management with hands-on labs and industry case studies.</li>
+              <li className="flex gap-2"><span className="text-teal-600">•</span> <strong>Career Counselling:</strong> Expert guidance on pharma career options, interview preparation, resume building, and specialization selection.</li>
+              <li className="flex gap-2"><span className="text-teal-600">•</span> <strong>Placement Centre:</strong> Campus interviews, internship placements, and direct connections with leading pharma companies for job placement.</li>
+            </ul>
             <p className="text-slate-600 leading-relaxed">
-              Headquartered in Ghaziabad, Uttar Pradesh, we serve students, early-career
-              professionals, and established pharmaceutical companies across India.
+              Headquartered in Ghaziabad, Uttar Pradesh, we serve B.Pharm, M.Pharm, and Chemistry (BSc/MSc) students, as well as established pharmaceutical companies across India and globally.
             </p>
           </motion.div>
           <motion.div {...fadeUp(0.15)}>
@@ -133,33 +159,34 @@ export default function About() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle title="Meet Our Directors" subtitle="Visionary leaders who bring decades of pharmaceutical expertise." />
           <div className="grid md:grid-cols-2 gap-8">
-            {DIRECTORS.map(({ name, role, phone, img, bio, specialties }, i) => (
+            {DIRECTORS.map(({ name, credentials, role, phone, profile, expertise }, i) => (
               <motion.div key={name} {...fadeUp(i * 0.15)}
-                className="bg-white rounded-2xl shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                className="bg-white rounded-2xl shadow-lg border border-slate-100 p-6 hover:shadow-xl transition-shadow duration-300"
               >
-                <div className="flex flex-col sm:flex-row">
-                  <img
-                    src={img}
-                    alt={name}
-                    className="w-full sm:w-40 h-52 sm:h-auto object-cover flex-shrink-0"
-                    loading="lazy"
-                  />
-                  <div className="p-6">
-                    <h3 className="font-heading font-bold text-xl text-primary-900">{name}</h3>
-                    <p className="text-teal-600 font-medium text-sm mb-3">{role}</p>
-                    <p className="text-slate-600 text-sm leading-relaxed mb-4">{bio}</p>
-                    <div className="flex flex-wrap gap-1.5 mb-4">
-                      {specialties.map(s => (
-                        <span key={s} className="px-2.5 py-0.5 bg-teal-50 text-teal-700 text-xs font-medium rounded-full border border-teal-100">
-                          {s}
-                        </span>
-                      ))}
-                    </div>
-                    <a href={`tel:${phone.replace(/\s/g,'')}`}
-                      className="inline-flex items-center gap-1.5 text-primary-700 font-semibold text-sm hover:text-teal-600 transition-colors">
-                      <Phone className="w-4 h-4" /> {phone}
-                    </a>
+                <div>
+                  <h3 className="font-heading font-bold text-xl text-primary-900">{name}</h3>
+                  <p className="text-slate-500 text-xs font-medium mt-0.5">{credentials}</p>
+                  <p className="text-teal-600 font-medium text-sm mb-3">{role}</p>
+                  <div className="space-y-3 mb-4">
+                    {profile.map((text) => (
+                      <p key={text} className="text-slate-600 text-sm leading-relaxed">{text}</p>
+                    ))}
                   </div>
+                  <div className="mb-4">
+                    <p className="text-primary-900 text-sm font-semibold mb-2">Core Expertise</p>
+                    <ul className="space-y-1.5">
+                      {expertise.map((item) => (
+                        <li key={item} className="text-slate-600 text-sm leading-relaxed flex gap-2">
+                          <span className="text-teal-600 mt-0.5">-</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <a href={`tel:${phone.replace(/\s/g,'')}`}
+                    className="inline-flex items-center gap-1.5 text-primary-700 font-semibold text-sm hover:text-teal-600 transition-colors">
+                    <Phone className="w-4 h-4" /> {phone}
+                  </a>
                 </div>
               </motion.div>
             ))}

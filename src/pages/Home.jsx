@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import Hero         from '../components/Hero';
 import SectionTitle from '../components/SectionTitle';
+import pharmaLabImg from '../assets/images/Pharmaceutical-Lab-Setup.png';
 
 /* ── helpers ─────────────────────────────────────────────────────────── */
 const fadeUp = (delay = 0) => ({
@@ -25,7 +26,7 @@ const SERVICES = [
     title: 'Pharma Research & Training',
     desc: 'Advanced hands-on training for pharmaceutical students and working professionals.',
     color: 'from-primary-600 to-primary-800',
-    path: '/training',
+    path: '/products',
   },
   {
     icon: Briefcase,
@@ -73,19 +74,18 @@ export default function Home() {
             <motion.div {...fadeUp()}>
               <span className="text-teal-600 font-semibold text-sm uppercase tracking-wider">About Us</span>
               <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary-900 mt-2 mb-5 leading-tight">
-                Shaping the Future of<br />
-                <span className="text-teal-600">Pharmaceutical Excellence</span>
+                Helping Pharma Students Build<br />
+                <span className="text-teal-600">Successful Careers</span>
               </h2>
               <p className="text-slate-600 leading-relaxed mb-4">
-                Imagine Pharma Solutions is a professional organisation delivering cutting-edge
-                pharmaceutical research training, industry consulting, and chemical manufacturing
-                services from Ghaziabad, Uttar Pradesh.
+                Imagine Pharma Solutions is a comprehensive training, counselling, and placement centre dedicated to helping students and professionals build successful careers in pharmaceutical research.
               </p>
-              <p className="text-slate-600 leading-relaxed mb-6">
-                Our institute bridges the gap between academic education and real-world industry
-                requirements, equipping graduates with the skills demanded by the global
-                pharmaceutical market.
-              </p>
+              <p className="text-slate-600 leading-relaxed mb-3 font-medium text-primary-900">Our Three Core Services:</p>
+              <ul className="text-slate-600 leading-relaxed mb-6 space-y-2 ml-4">
+                <li className="flex gap-2"><span className="text-teal-600 font-bold">•</span> <strong>Pharma Research Training</strong> — Advanced programs in drug discovery, synthesis, QA/QC, and regulatory affairs.</li>
+                <li className="flex gap-2"><span className="text-teal-600 font-bold">•</span> <strong>Career Counselling</strong> — Expert guidance on specialization, interviews, and career pathways.</li>
+                <li className="flex gap-2"><span className="text-teal-600 font-bold">•</span> <strong>Placement Support</strong> — Campus drives, internships, and direct job placements.</li>
+              </ul>
               <Link
                 to="/about"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-primary-900 text-white font-semibold rounded-xl hover:bg-primary-800 transition-colors duration-200"
@@ -97,7 +97,7 @@ export default function Home() {
             {/* Image */}
             <motion.div {...fadeUp(0.15)} className="relative">
               <img
-                src="https://images.unsplash.com/photo-1581093196277-9f608bb3b511?auto=format&fit=crop&w=800&q=80"
+                  src={pharmaLabImg}
                 alt="Pharmaceutical laboratory"
                 className="rounded-2xl shadow-2xl w-full object-cover h-80 lg:h-96"
                 loading="lazy"
@@ -193,7 +193,7 @@ export default function Home() {
           </div>
           <div className="text-center mt-8">
             <Link
-              to="/training"
+              to="/products"
               className="inline-flex items-center gap-2 px-7 py-3 bg-gradient-to-r from-primary-700 to-teal-600 text-white font-semibold rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-200"
             >
               View All Programs <ArrowRight className="w-4 h-4" />

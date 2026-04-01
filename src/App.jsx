@@ -10,7 +10,7 @@ import Footer   from './components/Footer';
 import Home      from './pages/Home';
 import About     from './pages/About';
 import Services  from './pages/Services';
-import Training  from './pages/Training';
+import Products  from './pages/Products';
 import Career    from './pages/Career';
 import Placement from './pages/Placement';
 import Contact   from './pages/Contact';
@@ -33,7 +33,7 @@ function AppRoutes() {
           <Route path="/"          element={<Home />}      />
           <Route path="/about"     element={<About />}     />
           <Route path="/services"  element={<Services />}  />
-          <Route path="/training"  element={<Training />}  />
+          <Route path="/products"  element={<Products />}  />
           <Route path="/career"    element={<Career />}    />
           <Route path="/placement" element={<Placement />} />
           <Route path="/contact"   element={<Contact />}   />

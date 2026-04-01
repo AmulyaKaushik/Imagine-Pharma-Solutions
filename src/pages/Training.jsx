@@ -226,7 +226,7 @@ export default function Training() {
       <section className="py-16 bg-gradient-to-r from-primary-900 to-teal-800">
         <div className="max-w-2xl mx-auto px-4 text-center">
           <motion.div {...fadeUp()}>
-            <h2 className="font-heading font-bold text-3xl text-white mb-3">Enrol in Our Training Program</h2>
+            <h2 className="font-heading font-bold text-3xl text-white mb-3">Enroll in Our Training Program</h2>
             <p className="text-blue-200 mb-6">
               Seats are limited. Reach out now to secure your place in our next cohort.
             </p>

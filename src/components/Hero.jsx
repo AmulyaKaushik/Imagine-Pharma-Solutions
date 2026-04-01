@@ -40,7 +40,7 @@ export default function Hero() {
           {/* Badge */}
           <motion.div variants={item} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-teal-300 text-sm font-medium mb-6 backdrop-blur-sm">
             <span className="w-2 h-2 rounded-full bg-teal-400 animate-pulse" />
-            Pharma Research &amp; Training Centre
+            Pharma Research Training, Career Counselling &amp; Placement Centre
           </motion.div>
 
           {/* Main heading */}
@@ -52,15 +52,14 @@ export default function Hero() {
           </motion.h1>
 
           {/* Sub-heading */}
-          <motion.p variants={item} className="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto mb-8 leading-relaxed">
-            Advanced Pharma Research Training, Consultancy &amp; Chemical Solutions —
-            bridging academia with industry excellence.
+          <motion.p variants={item} className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto mb-8 leading-relaxed">
+            Comprehensive training in drug discovery, chemical synthesis, and regulatory affairs. Expert career counselling and 100% placement support — bridging academia with industry excellence.
           </motion.p>
 
           {/* CTA buttons */}
           <motion.div variants={item} className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/training"
+              to="/services"
               className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-gradient-to-r from-teal-500 to-teal-600 text-white font-semibold rounded-xl shadow-xl hover:shadow-teal-500/30 hover:scale-105 transition-all duration-200"
             >
               Explore Programs
