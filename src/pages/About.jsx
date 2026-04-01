@@ -1,4 +1,4 @@
-git /**
+/**
  * About page — company story, mission, and directors
  */
 import { motion } from 'framer-motion';
