@@ -5,6 +5,7 @@
 import { motion } from 'framer-motion';
 import { Link }   from 'react-router-dom';
 import { ArrowRight, ChevronDown } from 'lucide-react';
+import pharmaLabBg from '../assets/images/Pharmaceutical-Lab-Setup.png';
 
 /* Stagger animation helpers */
 const container = {
@@ -19,73 +20,80 @@ const item = {
 export default function Hero() {
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{
-        backgroundImage: `url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1920&q=80')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
+      className="relative min-h-screen flex items-center overflow-hidden"
     >
+      <img
+        src={pharmaLabBg}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover opacity-15 brightness-[0.32] saturate-[0.62] contrast-[0.92]"
+      />
+
       {/* Dark gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-900/90 via-primary-800/80 to-teal-900/70" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#020a25]/96 via-[#071948]/94 to-[#061533]/95" />
+      <div className="absolute inset-0 bg-[#04174f]/64" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_32%_52%,rgba(56,189,248,0.04),transparent_46%)]" />
 
       {/* Decorative circles */}
-      <div className="absolute top-1/4 right-10 w-72 h-72 rounded-full bg-teal-500/10 blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 left-10  w-96 h-96 rounded-full bg-primary-500/10 blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 right-10 w-72 h-72 rounded-full bg-cyan-500/10 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 left-10 w-96 h-96 rounded-full bg-primary-500/10 blur-3xl pointer-events-none" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 w-full">
         <motion.div variants={container} initial="hidden" animate="show">
+          <div className="grid lg:grid-cols-[1fr_320px] gap-12 items-end">
+            <div>
 
-          {/* Badge */}
-          <motion.div variants={item} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-teal-300 text-sm font-medium mb-6 backdrop-blur-sm">
-            <span className="w-2 h-2 rounded-full bg-teal-400 animate-pulse" />
-            Pharma Research Training, Career Counselling &amp; Placement Centre
-          </motion.div>
+              {/* Main heading */}
+              <motion.h1 variants={item} className="font-heading font-medium text-5xl sm:text-6xl lg:text-7xl text-white leading-[0.96] mb-6 text-left">
+                Innovating
+                <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-200 italic">
+                  Healthcare,
+                </span>
+                <br />
+                Delivering Trust.
+              </motion.h1>
 
-          {/* Main heading */}
-          <motion.h1 variants={item} className="font-heading font-bold text-4xl sm:text-5xl md:text-6xl text-white leading-tight mb-6">
-            Empowering Future{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 to-blue-300">
-              Pharmaceutical Scientists
-            </span>
-          </motion.h1>
+              {/* Sub-heading */}
+              <motion.p variants={item} className="text-lg md:text-2xl text-blue-100 max-w-2xl mb-10 leading-relaxed text-left">
+                Pharmaceutical excellence across 50+ countries. From molecule to patient - GMP-certified, rigorously tested, consistently trusted.
+              </motion.p>
 
-          {/* Sub-heading */}
-          <motion.p variants={item} className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto mb-8 leading-relaxed">
-            Comprehensive training in drug discovery, chemical synthesis, and regulatory affairs. Expert career counselling and 100% placement support — bridging academia with industry excellence.
-          </motion.p>
+              {/* CTA buttons */}
+              <motion.div variants={item} className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  to="/services"
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[#3bc0ff] to-[#5ed2ff] text-[#071736] font-semibold rounded-md shadow-[0_0_30px_rgba(56,189,248,0.2)] hover:brightness-105 transition-all duration-200"
+                >
+                  Explore Services
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  to="/products"
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#0a1538]/35 border border-white/30 text-white font-medium rounded-md backdrop-blur-sm hover:bg-[#0f1d49]/50 transition-all duration-200"
+                >
+                  View Product Portfolio
+                </Link>
+              </motion.div>
+            </div>
 
-          {/* CTA buttons */}
-          <motion.div variants={item} className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/services"
-              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-gradient-to-r from-teal-500 to-teal-600 text-white font-semibold rounded-xl shadow-xl hover:shadow-teal-500/30 hover:scale-105 transition-all duration-200"
-            >
-              Explore Programs
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link
-              to="/contact"
-              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/10 border border-white/30 text-white font-semibold rounded-xl backdrop-blur-sm hover:bg-white/20 hover:scale-105 transition-all duration-200"
-            >
-              Contact Us
-            </Link>
-          </motion.div>
-
-          {/* Stats row */}
-          <motion.div variants={item} className="mt-14 grid grid-cols-3 gap-4 sm:gap-8 max-w-lg mx-auto">
-            {[
-              { value: '500+', label: 'Students Trained' },
-              { value: '15+', label: 'Industry Experts' },
-              { value: '100%', label: 'Placement Support' },
-            ].map(stat => (
-              <div key={stat.label} className="text-center">
-                <p className="font-heading font-bold text-2xl sm:text-3xl text-teal-300">{stat.value}</p>
-                <p className="text-xs sm:text-sm text-blue-200 mt-0.5">{stat.label}</p>
-              </div>
-            ))}
-          </motion.div>
+            {/* Side stats */}
+            <motion.div variants={item} className="hidden lg:flex flex-col gap-4 pb-2">
+              {[
+                { value: '25+', label: 'Years of Excellence' },
+                { value: '50+', label: 'Countries Served' },
+                { value: '1M+', label: 'Patients Benefited' },
+              ].map((stat) => (
+                <div key={stat.label} className="rounded-2xl border border-cyan-300/20 bg-[#060f2d]/75 px-7 py-5 shadow-[inset_0_0_0_1px_rgba(14,165,233,0.06)]">
+                  <div className="flex items-center gap-4">
+                    <p className="font-heading text-4xl text-cyan-300 leading-none">{stat.value}</p>
+                    <p className="text-slate-300 uppercase tracking-wide text-xs font-semibold">{stat.label}</p>
+                  </div>
+                </div>
+              ))}
+            </motion.div>
+          </div>
         </motion.div>
       </div>
 

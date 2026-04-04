@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import logo from '../assets/images/logo.png';
+import logo from '../assets/images/logo.jpeg';
 
 const NAV_LINKS = [
   { label: 'Home',      path: '/'          },
@@ -14,20 +14,11 @@ const NAV_LINKS = [
   { label: 'Services',  path: '/services'  },
   { label: 'Products',  path: '/products'  },
   { label: 'Career',    path: '/career'    },
-  { label: 'Placement', path: '/placement' },
   { label: 'Contact',   path: '/contact'   },
 ];
 
 export default function Navbar() {
-  const [scrolled,   setScrolled]   = useState(false);
   const [menuOpen,   setMenuOpen]   = useState(false);
-
-  /* Change navbar style on scroll */
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   /* Close menu on resize to desktop */
   useEffect(() => {
@@ -38,49 +29,51 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 bg-white transition-all duration-300
-        ${scrolled ? 'shadow-md py-1.5' : 'shadow-sm py-3'}`}
+      className="fixed top-0 left-0 right-0 z-50 !bg-white border-b border-[#e2e8f0] shadow-[0_4px_16px_rgba(15,23,42,0.04)] py-3"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div className="max-w-[1540px] mx-auto px-6 sm:px-10 lg:px-14 grid grid-cols-[1fr_auto] md:grid-cols-[260px_1fr_260px] items-center gap-3">
 
         {/* Logo — always on white, always natural colours */}
         <Link to="/" className="flex items-center" onClick={() => setMenuOpen(false)}>
           <img
             src={logo}
             alt="Imagine Pharma Solutions"
-            className="h-11 w-auto object-contain"
+            className="h-12 w-auto object-contain bg-white rounded-md"
           />
         </Link>
 
         {/* Desktop nav links */}
-        <nav className="hidden md:flex items-center gap-1">
+        <nav className="hidden md:flex items-center justify-center gap-3">
           {NAV_LINKS.map(({ label, path }) => (
             <NavLink
               key={path}
               to={path}
               className={({ isActive }) =>
-                `px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200
+                `px-3 py-2 rounded-xl text-[15px] font-semibold transition-all duration-200
                  ${isActive
-                   ? 'text-teal-600 bg-teal-50'
-                   : 'text-slate-700 hover:text-primary-900 hover:bg-primary-50'}`
+                   ? 'text-[#0284c7] bg-[#e0f2fe]'
+                   : 'text-[#334155] hover:text-[#0f172a] hover:bg-[#f8fafc]'}`
               }
             >
               {label}
             </NavLink>
           ))}
 
+        </nav>
+
+        <div className="hidden md:flex justify-end">
           {/* CTA button */}
           <Link
             to="/contact"
-            className="ml-3 px-4 py-2 bg-gradient-to-r from-primary-900 to-teal-500 text-white text-sm font-semibold rounded-lg shadow hover:shadow-lg hover:scale-105 transition-all duration-200"
+            className="ml-3 px-8 py-3 bg-gradient-to-r from-[#1e3a8a] to-[#06b6d4] text-white text-[15px] font-semibold rounded-2xl shadow-[0_8px_20px_rgba(14,116,144,0.25)] hover:shadow-[0_12px_26px_rgba(14,116,144,0.34)] transition-all duration-200"
           >
             Get in Touch
           </Link>
-        </nav>
+        </div>
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100 transition-colors duration-200"
+          className="md:hidden justify-self-end p-2 rounded-lg text-[#334155] hover:bg-[#f8fafc] transition-colors duration-200"
           onClick={() => setMenuOpen(prev => !prev)}
           aria-label="Toggle menu"
         >
@@ -96,7 +89,7 @@ export default function Navbar() {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25, ease: 'easeInOut' }}
-            className="md:hidden overflow-hidden bg-white border-t border-slate-100 shadow-lg"
+            className="md:hidden overflow-hidden !bg-white border-t border-[#e2e8f0] shadow-lg"
           >
             <nav className="flex flex-col px-4 py-3 gap-1">
               {NAV_LINKS.map(({ label, path }) => (
@@ -107,8 +100,8 @@ export default function Navbar() {
                   className={({ isActive }) =>
                     `px-4 py-2.5 rounded-lg text-sm font-medium transition-colors duration-200
                      ${isActive
-                       ? 'bg-teal-50 text-teal-700'
-                       : 'text-slate-700 hover:bg-slate-50 hover:text-primary-900'}`
+                       ? 'bg-[#e0f2fe] text-[#0284c7]'
+                       : 'text-[#334155] hover:bg-[#f8fafc] hover:text-[#0f172a]'}`
                   }
                 >
                   {label}
@@ -117,7 +110,7 @@ export default function Navbar() {
               <Link
                 to="/contact"
                 onClick={() => setMenuOpen(false)}
-                className="mt-2 px-4 py-2.5 bg-gradient-to-r from-primary-900 to-teal-500 text-white text-sm font-semibold rounded-lg text-center"
+                className="mt-2 px-4 py-2.5 bg-gradient-to-r from-[#1e3a8a] to-[#06b6d4] text-white text-sm font-semibold rounded-xl text-center"
               >
                 Get in Touch
               </Link>

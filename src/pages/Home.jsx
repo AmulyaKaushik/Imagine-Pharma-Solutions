@@ -9,7 +9,6 @@ import {
 } from 'lucide-react';
 import Hero         from '../components/Hero';
 import SectionTitle from '../components/SectionTitle';
-import pharmaLabImg from '../assets/images/Pharmaceutical-Lab-Setup.png';
 
 /* ── helpers ─────────────────────────────────────────────────────────── */
 const fadeUp = (delay = 0) => ({
@@ -58,6 +57,37 @@ const HIGHLIGHTS = [
   { icon: Atom,          label: 'Modern Infrastructure', desc: 'State-of-the-art lab facilities' },
 ];
 
+const ABOUT_SECTION_CARDS = [
+  {
+    icon: FlaskConical,
+    title: 'Pharmaceutical Manufacturing',
+    desc: 'State-of-the-art GMP-certified facilities producing oral solids, injectables, and topicals at scale with zero-compromise quality.',
+    stat: '99.8% BATCH PASS RATE',
+    span: 'lg:col-span-8',
+  },
+  {
+    icon: Briefcase,
+    title: 'Research & Development',
+    desc: 'Dedicated R&D labs accelerating drug discovery from preclinical through Phase III, with 40+ molecules in active pipeline.',
+    stat: '40+ ACTIVE MOLECULES',
+    span: 'lg:col-span-4',
+  },
+  {
+    icon: Atom,
+    title: 'Cold Chain Distribution',
+    desc: 'Temperature-controlled logistics ensuring product integrity from our warehouses to hospital pharmacies in 50+ countries.',
+    stat: '50+ COUNTRIES, 48HR DELIVERY',
+    span: 'lg:col-span-4',
+  },
+  {
+    icon: Leaf,
+    title: 'Regulatory Affairs',
+    desc: 'End-to-end regulatory support: USFDA, EMA, WHO-GMP dossier preparation, submissions, and post-approval lifecycle management.',
+    stat: 'USFDA · EMA · WHO-GMP',
+    span: 'lg:col-span-8',
+  },
+];
+
 /* ── component ─────────────────────────────────────────────────────────── */
 export default function Home() {
   return (
@@ -65,53 +95,7 @@ export default function Home() {
       {/* 1. Hero */}
       <Hero />
 
-      {/* 2. About Company snapshot */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-
-            {/* Text */}
-            <motion.div {...fadeUp()}>
-              <span className="text-teal-600 font-semibold text-sm uppercase tracking-wider">About Us</span>
-              <h2 className="font-heading font-bold text-3xl md:text-4xl text-primary-900 mt-2 mb-5 leading-tight">
-                Helping Pharma Students Build<br />
-                <span className="text-teal-600">Successful Careers</span>
-              </h2>
-              <p className="text-slate-600 leading-relaxed mb-4">
-                Imagine Pharma Solutions is a comprehensive training, counselling, and placement centre dedicated to helping students and professionals build successful careers in pharmaceutical research.
-              </p>
-              <p className="text-slate-600 leading-relaxed mb-3 font-medium text-primary-900">Our Three Core Services:</p>
-              <ul className="text-slate-600 leading-relaxed mb-6 space-y-2 ml-4">
-                <li className="flex gap-2"><span className="text-teal-600 font-bold">•</span> <strong>Pharma Research Training</strong> — Advanced programs in drug discovery, synthesis, QA/QC, and regulatory affairs.</li>
-                <li className="flex gap-2"><span className="text-teal-600 font-bold">•</span> <strong>Career Counselling</strong> — Expert guidance on specialization, interviews, and career pathways.</li>
-                <li className="flex gap-2"><span className="text-teal-600 font-bold">•</span> <strong>Placement Support</strong> — Campus drives, internships, and direct job placements.</li>
-              </ul>
-              <Link
-                to="/about"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-primary-900 text-white font-semibold rounded-xl hover:bg-primary-800 transition-colors duration-200"
-              >
-                Learn More <ArrowRight className="w-4 h-4" />
-              </Link>
-            </motion.div>
-
-            {/* Image */}
-            <motion.div {...fadeUp(0.15)} className="relative">
-              <img
-                  src={pharmaLabImg}
-                alt="Pharmaceutical laboratory"
-                className="rounded-2xl shadow-2xl w-full object-cover h-80 lg:h-96"
-                loading="lazy"
-              />
-              <div className="absolute -bottom-5 -left-5 bg-white rounded-2xl shadow-xl p-4 border border-slate-100">
-                <p className="font-heading font-bold text-2xl text-primary-900">10+</p>
-                <p className="text-slate-500 text-xs">Years of Excellence</p>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* 3. Key Services */}
+      {/* 2. Key Services */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle
@@ -133,6 +117,42 @@ export default function Home() {
                 <Link to={path} className="text-teal-600 font-medium text-sm hover:text-teal-700 inline-flex items-center gap-1 group">
                   Read more <ArrowRight className="w-3.5 h-3.5 translate-x-0 group-hover:translate-x-1 transition-transform" />
                 </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 3. About Company snapshot */}
+      <section className="py-20 bg-[#020a25]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-12 gap-8 items-end mb-8">
+            <motion.div {...fadeUp()} className="lg:col-span-8">
+              <div className="inline-flex items-center px-3 py-1 rounded-full border border-cyan-400/30 text-cyan-300 text-xs uppercase tracking-wider mb-4">
+                What We Do
+              </div>
+              <h2 className="font-heading text-5xl leading-[0.95] text-white max-w-xl">
+                End-to-End <span className="text-cyan-300 italic">Pharmaceutical</span><br />Solutions
+              </h2>
+            </motion.div>
+            <motion.p {...fadeUp(0.12)} className="lg:col-span-4 text-slate-400 text-lg leading-relaxed">
+              From molecule to market - we handle every stage of the pharmaceutical value chain with precision and accountability.
+            </motion.p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
+            {ABOUT_SECTION_CARDS.map(({ icon: Icon, title, desc, stat, span }, i) => (
+              <motion.div
+                key={title}
+                {...fadeUp(i * 0.1)}
+                className={`group rounded-2xl p-7 border border-cyan-400/20 bg-gradient-to-br from-[#091a49]/95 to-[#07133a]/95 hover:border-cyan-300/35 transition-all duration-300 ${span}`}
+              >
+                <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[#0f2a67] border border-cyan-400/20 mb-5">
+                  <Icon className="w-5 h-5 text-cyan-300" strokeWidth={1.9} />
+                </div>
+                <h3 className="font-heading font-semibold text-white text-4xl mb-3">{title}</h3>
+                <p className="text-slate-400 text-base leading-relaxed mb-7 max-w-2xl">{desc}</p>
+                <p className="text-cyan-400 text-xs font-semibold tracking-wider uppercase">• {stat}</p>
               </motion.div>
             ))}
           </div>

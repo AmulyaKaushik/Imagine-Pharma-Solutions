@@ -17,7 +17,7 @@ const QUICK_LINKS = [
 
 export default function Footer() {
   return (
-    <footer className="bg-primary-900 text-white">
+    <footer className="bg-gradient-to-b from-[#060d26] to-[#04091e] text-white border-t border-cyan-400/15">
       {/* Main content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
@@ -59,7 +59,7 @@ export default function Footer() {
                   to={path}
                   className="text-slate-300 hover:text-teal-400 text-sm transition-colors duration-200 flex items-center gap-1 group"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-teal-600 group-hover:bg-teal-400 transition-colors" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-cyan-300 group-hover:bg-teal-300 transition-colors" />
                   {label}
                 </Link>
               </li>
@@ -80,7 +80,7 @@ export default function Footer() {
               'Placement Support',
             ].map(s => (
               <li key={s} className="flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-teal-600 flex-shrink-0" />
+                <span className="w-1.5 h-1.5 rounded-full bg-cyan-300 flex-shrink-0" />
                 {s}
               </li>
             ))}

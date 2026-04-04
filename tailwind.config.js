@@ -7,36 +7,35 @@ export default {
   theme: {
     extend: {
       colors: {
-        /* ── Primary: dark navy matching logo "IMAGINE" text (#1A2368) ── */
+        /* Deep navy + cyan palette matching reference design */
         primary: {
-          50:  '#eef2ff',
-          100: '#e0e7ff',
-          200: '#c7d2fe',
-          300: '#a5b4fc',
-          400: '#6675e0',
-          500: '#4655c8',
-          600: '#2e3fae',
-          700: '#1e3090',
-          800: '#1a2878',
-          900: '#1a2368',   /* logo "IMAGINE" navy */
+          50:  '#e9edff',
+          100: '#d5dcff',
+          200: '#b1bfff',
+          300: '#8197ff',
+          400: '#5672ef',
+          500: '#3a55d2',
+          600: '#243fad',
+          700: '#172f84',
+          800: '#0e1e59',
+          900: '#04091e',
         },
-        /* ── Teal/Cyan: logo flask turquoise (#06B6D4) ── */
         teal: {
-          50:  '#ecfeff',
-          100: '#cffafe',
-          200: '#a5f3fc',
-          300: '#67e8f9',
-          400: '#22d3ee',
-          500: '#06b6d4',   /* logo flask cyan */
-          600: '#0891b2',
-          700: '#0e7490',
-          800: '#155e75',
-          900: '#164e63',
+          50:  '#ebfdff',
+          100: '#cff9ff',
+          200: '#9ff1ff',
+          300: '#6de6ff',
+          400: '#38d5f8',
+          500: '#1cb8e8',
+          600: '#1497cd',
+          700: '#1179a6',
+          800: '#125f80',
+          900: '#124f68',
         },
       },
       fontFamily: {
-        sans:    ['Inter', 'system-ui', 'sans-serif'],
-        heading: ['Poppins', 'system-ui', 'sans-serif'],
+        sans:    ['DM Sans', 'system-ui', 'sans-serif'],
+        heading: ['Fraunces', 'serif'],
       },
     },
   },
