@@ -29,7 +29,7 @@ export default function Navbar() {
 
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 !bg-white border-b border-[#e2e8f0] shadow-[0_4px_16px_rgba(15,23,42,0.04)] py-3"
+      className="fixed top-0 left-0 right-0 z-50 bg-[#ffffff] border-b border-[#e2e8f0] shadow-[0_4px_16px_rgba(15,23,42,0.04)] py-3"
     >
       <div className="max-w-[1540px] mx-auto px-6 sm:px-10 lg:px-14 grid grid-cols-[1fr_auto] md:grid-cols-[260px_1fr_260px] items-center gap-3">
 
@@ -38,7 +38,7 @@ export default function Navbar() {
           <img
             src={logo}
             alt="Imagine Pharma Solutions"
-            className="h-12 w-auto object-contain bg-white rounded-md"
+            className="h-12 w-auto object-contain bg-[#ffffff] rounded-md"
           />
         </Link>
 
@@ -89,7 +89,7 @@ export default function Navbar() {
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25, ease: 'easeInOut' }}
-            className="md:hidden overflow-hidden !bg-white border-t border-[#e2e8f0] shadow-lg"
+            className="md:hidden overflow-hidden bg-[#ffffff] border-t border-[#e2e8f0] shadow-lg"
           >
             <nav className="flex flex-col px-4 py-3 gap-1">
               {NAV_LINKS.map(({ label, path }) => (
