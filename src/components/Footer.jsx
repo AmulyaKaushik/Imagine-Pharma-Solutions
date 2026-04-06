@@ -11,7 +11,6 @@ const QUICK_LINKS = [
   { label: 'Services',       path: '/services'  },
   { label: 'Products',       path: '/products'  },
   { label: 'Career',         path: '/career'    },
-  { label: 'Placement',      path: '/placement' },
   { label: 'Contact',        path: '/contact'   },
 ];
 

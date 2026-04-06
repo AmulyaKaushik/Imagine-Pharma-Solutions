@@ -8,7 +8,8 @@ import Footer   from './components/Footer';
 
 // Pages
 import Home      from './pages/Home';
-import AboutServices from './pages/AboutServices';
+import About     from './pages/About';
+import Services  from './pages/Services';
 import Products  from './pages/Products';
 import CareerPlacement from './pages/CareerPlacement';
 import Contact   from './pages/Contact';
@@ -29,8 +30,8 @@ function AppRoutes() {
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/"          element={<Home />}      />
-          <Route path="/about"     element={<AboutServices />}     />
-          <Route path="/services"  element={<AboutServices />}  />
+          <Route path="/about"     element={<About />}     />
+          <Route path="/services"  element={<Services />}  />
           <Route path="/products"  element={<Products />}  />
           <Route path="/career"    element={<CareerPlacement />}    />
           <Route path="/placement" element={<CareerPlacement />} />
