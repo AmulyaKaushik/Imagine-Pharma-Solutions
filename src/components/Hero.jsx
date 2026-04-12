@@ -41,7 +41,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 w-full">
         <motion.div variants={container} initial="hidden" animate="show">
-          <div className="grid lg:grid-cols-[1fr_320px] gap-12 items-end">
+          <div className="grid grid-cols-1 gap-12 items-end">
             <div>
 
               {/* Main heading */}
@@ -49,7 +49,7 @@ export default function Hero() {
                 Innovating
                 <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-200 italic">
-                  Healthcare,
+                  Chemistry,
                 </span>
                 <br />
                 Delivering Trust.
@@ -57,7 +57,7 @@ export default function Hero() {
 
               {/* Sub-heading */}
               <motion.p variants={item} className="text-lg md:text-2xl text-blue-100 max-w-2xl mb-10 leading-relaxed text-left">
-                Pharmaceutical excellence across 50+ countries. From molecule to patient - GMP-certified, rigorously tested, consistently trusted.
+                Pharmaceutical excellence. From molecule to patient certified, rigorously tested, consistently trusted.
               </motion.p>
 
               {/* CTA buttons */}
@@ -78,21 +78,6 @@ export default function Hero() {
               </motion.div>
             </div>
 
-            {/* Side stats */}
-            <motion.div variants={item} className="hidden lg:flex flex-col gap-4 pb-2">
-              {[
-                { value: '25+', label: 'Years of Excellence' },
-                { value: '50+', label: 'Countries Served' },
-                { value: '1M+', label: 'Patients Benefited' },
-              ].map((stat) => (
-                <div key={stat.label} className="rounded-2xl border border-cyan-300/20 bg-[#060f2d]/75 px-7 py-5 shadow-[inset_0_0_0_1px_rgba(14,165,233,0.06)]">
-                  <div className="flex items-center gap-4">
-                    <p className="font-heading text-4xl text-cyan-300 leading-none">{stat.value}</p>
-                    <p className="text-slate-300 uppercase tracking-wide text-xs font-semibold">{stat.label}</p>
-                  </div>
-                </div>
-              ))}
-            </motion.div>
           </div>
         </motion.div>
       </div>

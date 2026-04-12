@@ -25,7 +25,7 @@ const SERVICES = [
     title: 'Pharma Research & Training',
     desc: 'Advanced hands-on training for pharmaceutical students and working professionals.',
     color: 'from-primary-600 to-primary-800',
-    path: '/products',
+    path: '/services',
   },
   {
     icon: Briefcase,
@@ -39,14 +39,14 @@ const SERVICES = [
     title: 'APIs & Intermediates',
     desc: 'High-quality Active Pharmaceutical Ingredients and pharmaceutical intermediates.',
     color: 'from-blue-500 to-blue-700',
-    path: '/services',
+    path: '/products',
   },
   {
     icon: Leaf,
     title: 'Specialty Chemicals',
     desc: 'Reliable specialty chemical manufacturing and supply for diverse industrial needs.',
     color: 'from-emerald-500 to-emerald-700',
-    path: '/services',
+    path: '/products',
   },
 ];
 
@@ -61,7 +61,7 @@ const ABOUT_SECTION_CARDS = [
   {
     icon: FlaskConical,
     title: 'Pharmaceutical Manufacturing',
-    desc: 'State-of-the-art GMP-certified facilities producing oral solids, injectables, and topicals at scale with zero-compromise quality.',
+    desc: 'State-of-the-art certified facilities producing oral solids, injectables, and topicals at scale with zero-compromise quality.',
     stat: '99.8% BATCH PASS RATE',
     span: 'lg:col-span-8',
   },
@@ -74,14 +74,14 @@ const ABOUT_SECTION_CARDS = [
   },
   {
     icon: Atom,
-    title: 'Cold Chain Distribution',
+    title: 'Product Consultancy',
     desc: 'Temperature-controlled logistics ensuring product integrity from our warehouses to hospital pharmacies in 50+ countries.',
     stat: '50+ COUNTRIES, 48HR DELIVERY',
     span: 'lg:col-span-4',
   },
   {
     icon: Leaf,
-    title: 'Regulatory Affairs',
+    title: 'Pharma Research And Training',
     desc: 'End-to-end regulatory support: USFDA, EMA, WHO-GMP dossier preparation, submissions, and post-approval lifecycle management.',
     stat: 'USFDA · EMA · WHO-GMP',
     span: 'lg:col-span-8',
@@ -136,7 +136,7 @@ export default function Home() {
               </h2>
             </motion.div>
             <motion.p {...fadeUp(0.12)} className="lg:col-span-4 text-slate-400 text-lg leading-relaxed">
-              From molecule to market - we handle every stage of the pharmaceutical value chain with precision and accountability.
+              From speciality chemical to API - we handle every stage of the pharmaceutical value chain with precision and accountability.
             </motion.p>
           </div>
 
@@ -213,7 +213,7 @@ export default function Home() {
           </div>
           <div className="text-center mt-8">
             <Link
-              to="/products"
+              to="/services"
               className="inline-flex items-center gap-2 px-7 py-3 bg-gradient-to-r from-primary-700 to-teal-600 text-white font-semibold rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-200"
             >
               View All Programs <ArrowRight className="w-4 h-4" />

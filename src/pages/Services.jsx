@@ -39,7 +39,7 @@ const SERVICES = [
       'Intellectual Property (IP) protection strategies',
       'Classroom lectures + laboratory practicals + industry case studies',
     ],
-    link: '/products',
+    link: '/contact',
   },
   {
     icon: Briefcase,

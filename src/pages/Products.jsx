@@ -63,8 +63,8 @@ const PRODUCT_CATEGORIES = [
 const PRODUCT_HIGHLIGHTS = [
   {
     icon: Shield,
-    label: 'GMP Certified',
-    description: 'All products manufactured under Good Manufacturing Practice standards.',
+    label: 'Certified Manufacturing',
+    description: 'All products manufactured under Certified Manufacturing Standards.',
   },
   {
     icon: TrendingUp,

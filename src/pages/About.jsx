@@ -29,7 +29,7 @@ const DIRECTORS = [
   {
     name:  'Dr. Ashish Gupta',
     credentials: '(Ph.D. N.E.T. CSIR)',
-    role:  'Co-Founder & Director - API Process Development and Manufacturing',
+    role:  'Co-Founder & Director',
     phone: '+91 8800619561',
     profile: [
       'With over 20 years of extensive experience in Active Pharmaceutical Ingredient (API) synthesis, Dr. Ashish brings deep expertise in process development, route scouting, technology transfer, scale-up, and commercial manufacturing in the pharmaceutical industry.',
@@ -49,7 +49,7 @@ const DIRECTORS = [
   {
     name:  'Dr. Anuj Kumar Rathi',
     credentials: '(Ph.D. PDF, MBA, Legal Consultant)',
-    role:  'Co-Founder & Director - API R&D and Strategic Operations',
+    role:  'Co-Founder & Director',
     phone: '+91 7042112854',
     profile: [
       'A seasoned research professional with 19 years of industrial experience in synthetic organic chemistry, specializing in API R&D, process development, and scale-up.',
@@ -73,7 +73,7 @@ const DIRECTORS = [
 
 const PILLARS = [
   { icon: Target,    title: 'Our Mission',  desc: 'Bridge the gap between academic education and industry skills to create globally competent pharmaceutical professionals.' },
-  { icon: Lightbulb, title: 'Our Vision',   desc: 'To become India\'s most trusted pharma research training and consulting organisation.' },
+  { icon: Lightbulb, title: 'Our Vision',   desc: 'To become India\'s most trusted pharma research training, consulting and contract manufacturing organisation.' },
   { icon: Award,     title: 'Our Values',   desc: 'Excellence, integrity, innovation, and commitment to advancing pharmaceutical science and human health.' },
   { icon: Globe,     title: 'Our Reach',    desc: 'Serving students, pharma startups, and established companies across India and internationally.' },
 ];
@@ -120,7 +120,7 @@ export default function About() {
               <li className="flex gap-2"><span className="text-teal-600">•</span> <strong>Placement Centre:</strong> Campus interviews, internship placements, and direct connections with leading pharma companies for job placement.</li>
             </ul>
             <p className="text-slate-600 leading-relaxed">
-              Headquartered in Ghaziabad, Uttar Pradesh, we serve B.Pharm, M.Pharm, and Chemistry (BSc/MSc) students, as well as established pharmaceutical companies across India and globally.
+              Headquartered in Greater Noida, Uttar Pradesh, we serve B.Pharm, M.Pharm, and Chemistry (BSc/MSc) students, as well as established pharmaceutical companies across India and globally.
             </p>
           </motion.div>
           <motion.div {...fadeUp(0.15)}>
