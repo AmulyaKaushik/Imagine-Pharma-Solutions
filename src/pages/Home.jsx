@@ -75,15 +75,15 @@ const ABOUT_SECTION_CARDS = [
   {
     icon: Atom,
     title: 'Product Consultancy',
-    desc: 'Temperature-controlled logistics ensuring product integrity from our warehouses to hospital pharmacies in 50+ countries.',
-    stat: '50+ COUNTRIES, 48HR DELIVERY',
+    desc: 'Strategic product and regulatory consultancy for APIs and intermediates, covering route selection, process optimization, technical documentation, and commercialization planning.',
+    stat: 'END-TO-END TECHNICAL & REGULATORY SUPPORT',
     span: 'lg:col-span-4',
   },
   {
     icon: Leaf,
     title: 'Pharma Research And Training',
-    desc: 'End-to-end regulatory support: USFDA, EMA, WHO-certified dossier preparation, submissions, and post-approval lifecycle management.',
-    stat: 'USFDA · EMA · WHO-certified',
+    desc: 'Industry-focused research training in drug discovery, synthesis, process development, quality systems, and compliance practices to build job-ready pharmaceutical professionals.',
+    stat: 'HANDS-ON TRAINING · CERTIFIED LEARNING PATHS',
     span: 'lg:col-span-8',
   },
 ];

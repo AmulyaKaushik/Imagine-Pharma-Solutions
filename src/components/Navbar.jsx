@@ -29,16 +29,16 @@ export default function Navbar() {
 
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 bg-[#ffffff] border-b border-[#e2e8f0] shadow-[0_4px_16px_rgba(15,23,42,0.04)] py-3"
+      className="fixed top-0 left-0 right-0 z-50 h-20 bg-[#ffffff] border-b border-[#e2e8f0] shadow-[0_4px_16px_rgba(15,23,42,0.04)]"
     >
-      <div className="max-w-[1540px] mx-auto px-6 sm:px-10 lg:px-14 grid grid-cols-[1fr_auto] md:grid-cols-[260px_1fr_260px] items-center gap-3">
+      <div className="max-w-[1540px] h-full mx-auto px-6 sm:px-10 lg:px-14 grid grid-cols-[1fr_auto] md:grid-cols-[280px_1fr_260px] items-center gap-3">
 
         {/* Logo — always on white, always natural colours */}
-        <Link to="/" className="flex items-center" onClick={() => setMenuOpen(false)}>
+        <Link to="/" className="flex items-center h-full" onClick={() => setMenuOpen(false)}>
           <img
             src={logo}
             alt="Imagine Pharma Solutions"
-            className="h-12 w-auto object-contain bg-[#ffffff] rounded-md"
+            className="h-full w-auto max-h-[76px] object-contain bg-[#ffffff]"
           />
         </Link>
 

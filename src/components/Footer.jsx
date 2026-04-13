@@ -3,7 +3,7 @@
  */
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Globe } from 'lucide-react';
-import logo from '../assets/images/logo.jpeg';
+import logo from '../assets/images/logo1.jpeg';
 
 const QUICK_LINKS = [
   { label: 'Home',           path: '/'          },
@@ -26,7 +26,7 @@ export default function Footer() {
             <img
               src={logo}
               alt="Imagine Pharma Solutions"
-              className="h-12 w-auto object-contain"
+              className="h-16 w-auto object-contain"
             />
           </div>
           <p className="text-slate-300 text-sm leading-relaxed">
