@@ -11,6 +11,9 @@ import Home      from './pages/Home';
 import About     from './pages/About';
 import Services  from './pages/Services';
 import Products  from './pages/Products';
+import PharmaceuticalIntermediates from './pages/PharmaceuticalIntermediates';
+import PharmaceuticalIntermediateDetail from './pages/PharmaceuticalIntermediateDetail';
+import SpecialtyChemicals from './pages/SpecialtyChemicals';
 import CareerPlacement from './pages/CareerPlacement';
 import Contact   from './pages/Contact';
 
@@ -33,6 +36,9 @@ function AppRoutes() {
           <Route path="/about"     element={<About />}     />
           <Route path="/services"  element={<Services />}  />
           <Route path="/products"  element={<Products />}  />
+          <Route path="/pharmaceutical-intermediates" element={<PharmaceuticalIntermediates />} />
+          <Route path="/pharmaceutical-intermediates/:slug" element={<PharmaceuticalIntermediateDetail />} />
+          <Route path="/specialty-chemicals" element={<SpecialtyChemicals />} />
           <Route path="/career"    element={<CareerPlacement />}    />
           <Route path="/placement" element={<CareerPlacement />} />
           <Route path="/contact"   element={<Contact />}   />

@@ -138,7 +138,7 @@ export default function Products() {
               <motion.div
                 key={title}
                 {...fadeUp(i * 0.1)}
-                className="bg-white rounded-2xl p-8 shadow border border-slate-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+                className="bg-white rounded-2xl p-8 shadow border border-slate-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col"
               >
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-br from-primary-700 to-teal-600 mb-4">
                   <Icon className="w-6 h-6 text-white" />
@@ -153,6 +153,12 @@ export default function Products() {
                     </li>
                   ))}
                 </ul>
+                <Link
+                  to={title === 'Specialty Chemicals' ? '/specialty-chemicals' : '/pharmaceutical-intermediates'}
+                  className="mt-6 inline-flex items-center gap-2 text-teal-600 font-semibold text-sm hover:text-teal-700 transition-colors duration-200"
+                >
+                  View More <ArrowRight className="w-4 h-4" />
+                </Link>
               </motion.div>
             ))}
           </div>
