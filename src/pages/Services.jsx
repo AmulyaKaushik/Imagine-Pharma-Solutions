@@ -8,6 +8,7 @@ import {
   CheckCircle2, ArrowRight,
 } from 'lucide-react';
 import SectionTitle from '../components/SectionTitle';
+import apiIntermediatesImage from '../assets/images/APIs & Intermediates Expertise.png';
 
 const PageWrapper = ({ children }) => (
   <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.35 }}>
@@ -62,7 +63,7 @@ const SERVICES = [
     title: 'APIs & Intermediates Expertise',
     subtitle: 'Manufacturing | Trading | Supply',
     color: 'from-blue-600 to-blue-800',
-    img: 'https://images.unsplash.com/photo-1563213126-a4273aed2016?auto=format&fit=crop&w=800&q=80',
+    img: apiIntermediatesImage,
     desc: 'We are experienced manufacturers and traders of Active Pharmaceutical Ingredients (APIs) and pharmaceutical intermediates. Our products meet stringent quality standards and are supplied to domestic and international markets.',
     features: [
       'Certified manufacturing',

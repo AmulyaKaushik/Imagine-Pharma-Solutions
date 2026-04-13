@@ -170,12 +170,11 @@ export default function Placement() {
       {/* Stats */}
       <section className="py-16 bg-gradient-to-br from-primary-900 to-teal-900 text-white">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 text-center">
             {[
-              { value: '500+', label: 'Students Placed'    },
               { value: '50+',  label: 'Hiring Partners'    },
               { value: '95%',  label: 'Placement Rate'     },
-              { value: '3 mo', label: 'Average Time to Job'},
+              { value: '3-6 mo', label: 'Average Time to Job'},
             ].map(({ value, label }, i) => (
               <motion.div key={label} {...fadeUp(i * 0.1)}>
                 <p className="font-heading font-bold text-3xl text-teal-300 mb-1">{value}</p>
