@@ -44,7 +44,7 @@ const SERVICES = [
   {
     icon: GraduationCap,
     title: 'Higher Studies & Certifications',
-    desc: 'Guidance on postgraduate programs, advanced certifications (GMP, RAC), scholarships, research fellowships, and lifelong learning opportunities in India and abroad.',
+    desc: 'Guidance on postgraduate programs, advanced certifications (certified, RAC), scholarships, research fellowships, and lifelong learning opportunities in India and abroad.',
     color: 'from-violet-500 to-violet-700',
   },
   {

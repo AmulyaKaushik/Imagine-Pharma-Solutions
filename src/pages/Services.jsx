@@ -65,7 +65,7 @@ const SERVICES = [
     img: 'https://images.unsplash.com/photo-1563213126-a4273aed2016?auto=format&fit=crop&w=800&q=80',
     desc: 'We are experienced manufacturers and traders of Active Pharmaceutical Ingredients (APIs) and pharmaceutical intermediates. Our products meet stringent quality standards and are supplied to domestic and international markets.',
     features: [
-      'GMP-compliant manufacturing',
+      'Certified manufacturing',
       'Wide range of APIs and intermediates',
       'Domestic and international supply',
       'Rigorous quality testing',

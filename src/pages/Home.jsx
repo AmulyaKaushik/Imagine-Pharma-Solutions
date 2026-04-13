@@ -82,8 +82,8 @@ const ABOUT_SECTION_CARDS = [
   {
     icon: Leaf,
     title: 'Pharma Research And Training',
-    desc: 'End-to-end regulatory support: USFDA, EMA, WHO-GMP dossier preparation, submissions, and post-approval lifecycle management.',
-    stat: 'USFDA · EMA · WHO-GMP',
+    desc: 'End-to-end regulatory support: USFDA, EMA, WHO-certified dossier preparation, submissions, and post-approval lifecycle management.',
+    stat: 'USFDA · EMA · WHO-certified',
     span: 'lg:col-span-8',
   },
 ];

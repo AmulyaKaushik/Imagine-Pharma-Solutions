@@ -25,7 +25,7 @@ const PRODUCT_CATEGORIES = [
   {
     icon: Beaker,
     title: 'Active Pharmaceutical Ingredients (APIs)',
-    description: 'High-quality, GMP-compliant APIs manufactured with rigorous quality control and regulatory adherence.',
+    description: 'High-quality, certified APIs manufactured with rigorous quality control and regulatory adherence.',
     features: [
       'Therapeutic API synthesis',
       'Custom API development',
@@ -197,7 +197,7 @@ export default function Products() {
                   <Shield className="w-6 h-6 text-teal-600 flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold text-primary-900 text-sm mb-1">Regulatory Compliance</h4>
-                    <p className="text-slate-600 text-sm">Full GMP compliance, DMF filing support, and regulatory documentation.</p>
+                    <p className="text-slate-600 text-sm">Full certified compliance, DMF filing support, and regulatory documentation.</p>
                   </div>
                 </div>
                 <div className="flex gap-3">

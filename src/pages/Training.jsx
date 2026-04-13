@@ -77,7 +77,7 @@ const CURRICULUM = [
     icon: BookOpen,
     title: 'Documentation & Compliance',
     topics: [
-      'GMP documentation systems',
+      'Certified documentation systems',
       'SOP writing & review',
       'Deviation and CAPA management',
       'Audit readiness',

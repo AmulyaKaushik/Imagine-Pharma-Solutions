@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import { Link }   from 'react-router-dom';
 import { Phone, Award, Target, Lightbulb, Globe, ArrowRight } from 'lucide-react';
 import SectionTitle from '../components/SectionTitle';
+import drAshishPhoto from '../assets/images/Dr. Ashish Gupta.jpeg';
+import drAnujPhoto from '../assets/images/Dr. Anuj Kumar Rathi.jpeg';
 
 /* Page transition wrapper */
 const PageWrapper = ({ children }) => (
@@ -31,19 +33,19 @@ const DIRECTORS = [
     credentials: '(Ph.D. N.E.T. CSIR)',
     role:  'Co-Founder & Director',
     phone: '+91 8800619561',
+    photo: drAshishPhoto,
     profile: [
-      'With over 20 years of extensive experience in Active Pharmaceutical Ingredient (API) synthesis, Dr. Ashish brings deep expertise in process development, route scouting, technology transfer, scale-up, and commercial manufacturing in the pharmaceutical industry.',
-      'He collaborates with pharmaceutical companies, CROs, CDMOs, and chemical manufacturers to develop robust, scalable, and cost-effective synthetic processes for APIs and complex intermediates.',
-      'He supports organizations in translating molecules from laboratory research to pilot and commercial-scale manufacturing while maintaining the highest standards of quality, safety, and regulatory compliance.',
+      'With over 20 years of extensive experience in Active Pharmaceutical Ingredient (API) synthesis, Dr. Ashish bring deep expertise in process development, route scouting, technology transfer, scale-up, and commercial manufacturing within the pharmaceutical industry.',
+      'Dr. Ashish collaborate with pharmaceutical companies, CROs, CDMOs, and chemical manufacturers to develop robust, scalable, and cost-effective synthetic processes. His expertise lies in designing efficient and regulatory-compliant routes for APIs and complex intermediates used across the pharmaceutical and specialty chemical industries.',
+      'Dr. Ashish support organizations in translating molecules from laboratory research to pilot and commercial-scale manufacturing, ensuring seamless scale-up while maintaining the highest standards of quality, safety, and regulatory compliance.',
     ],
     expertise: [
-      'Developed and optimized synthetic routes for a wide range of APIs and advanced intermediates.',
-      'Ensured process efficiency, regulatory compliance, and cost-effective production.',
-      'Guided projects from early-stage development to commercial-scale manufacturing.',
-      'Extensive experience in nitrosamine, genotoxic, and process risk assessment.',
-      'Expert in impurities identification, synthesis, isolation, and characterization in final APIs.',
+      'Developed and optimized synthetic routes for a wide range of APIs and advanced intermediates',
+      'Ensured process efficiency, regulatory compliance,and cost-effective production',
+      'Extensive guidance for projects from early-stage development to commercial-scale manufacturing.',
+      'Extensive experience in Nitrosamine, genotoxic & process risk assessment, all types of impurities identification, synthesis, isolation & characterization in final APIs.',
       'Developed novel synthetic routes for 25+ APIs.',
-      'Filed and was granted 35+ process patents, demonstrating technical leadership and innovation.',
+      'Filed and been granted 35+ process patents, demonstrating strong innovation and technical leadership',
     ],
   },
   {
@@ -51,22 +53,24 @@ const DIRECTORS = [
     credentials: '(Ph.D. PDF, MBA, Legal Consultant)',
     role:  'Co-Founder & Director',
     phone: '+91 7042112854',
+    photo: drAnujPhoto,
     profile: [
-      'A seasoned research professional with 19 years of industrial experience in synthetic organic chemistry, specializing in API R&D, process development, and scale-up.',
-      'He has proven expertise in designing and optimizing synthetic routes, driving projects from laboratory to commercialization, and leading cross-functional teams.',
-      'He holds a Ph.D. in Organic Chemistry and an MBA in Operations and Marketing, combining technical depth with strategic business acumen. He also completed postdoctoral research in Europe focused on synthetic organic chemistry, flow chemistry, and catalysis.',
-      'His legal consulting background strengthens regulatory affairs support, streamlines approvals, and aligns documentation with pharmaceutical and chemical industry standards.',
-      'He is committed to delivering practical, cost-effective, science-driven, and regulatory-compliant solutions that improve product quality, shorten development timelines, and enhance manufacturing performance.',
+      'A seasoned research professional with 19 years of industrial experience in synthetic organic chemistry, specializing in API R&D, process development, and scale-up. Proven expertise in designing and optimizing synthetic routes, driving projects from laboratory to commercialization, and leading cross-functional teams.',
+      'Holds a Ph.D. in organic chemistry and Postdoctoral research in synthetic Organic chemistry, Flow chemistry and Catalysis (Europe) in along with an MBA in Operations & Marketing, combining strong technical expertise with strategic business acumen.',
+      'Dr. Anuj also holds a law degree, providing a solid foundation in regulatory affairs. This enables ensuring compliance, streamlining approvals, and aligning processes and documentation with pharmaceutical andchemical industry standards.',
+      'Dr.Anuj committed to delivering practical, cost-effective,science-driven solutions with regulatory compliance for CROs, CDMOs, and other chemical manufacturers that enhance product quality, reduce development timelines.',
     ],
     expertise: [
-      'Synthetic chemistry: R&D, process development, and scale-up.',
-      'Medicinal chemistry and natural product chemistry.',
-      'Nanocatalysis and flow chemistry.',
-      'Drug discovery and development.',
-      'Extensive work on complex heterocyclic compounds, carbohydrates, metabolites, macrocycles, peptides, lipids, and chiral compounds.',
-      'Highly skilled in RFP evaluation (FTE, FFS), proposal development, route scouting, and end-to-end project execution.',
-      'Authored 37+ high-impact publications and served as a Visiting Scientist at the Polish Academy of Sciences, Warsaw.',
-      'Supports pharmaceutical companies in accelerating API development, key intermediate synthesis, and transition to commercial-scale production.',
+      'Synthetic Chemistry: R&D, process development, scaleup, and technology transfer.',
+      'Medicinal & Natural Product Chemistry',
+      'Drug Discovery & Development',
+      'Nano-catalysis, Flow Chemistry, Process Optimization &Route Scouting',
+      'API Development & Advanced Intermediat',
+      'Green Chemistry & Sustainable Process Development',
+      'Asymmetric Chemistry',
+      'Heterocyclic Chemistry & Complex Molecule Synthesis',
+      'Scale-Up & Commercial Manufacturing Support',
+      'Regulatory Compliance & Documentation (CMC Support)',
     ],
   },
 ];
@@ -159,11 +163,17 @@ export default function About() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle title="Meet Our Directors" subtitle="Visionary leaders who bring decades of pharmaceutical expertise." />
           <div className="grid md:grid-cols-2 gap-8">
-            {DIRECTORS.map(({ name, credentials, role, phone, profile, expertise }, i) => (
+            {DIRECTORS.map(({ name, credentials, role, phone, photo, profile, expertise }, i) => (
               <motion.div key={name} {...fadeUp(i * 0.15)}
                 className="bg-white rounded-2xl shadow-lg border border-slate-100 p-6 hover:shadow-xl transition-shadow duration-300"
               >
                 <div>
+                  <img
+                    src={photo}
+                    alt={name}
+                    className="w-full h-64 object-contain object-top rounded-xl mb-4 bg-slate-50"
+                    loading="lazy"
+                  />
                   <h3 className="font-heading font-bold text-xl text-primary-900">{name}</h3>
                   <p className="text-slate-500 text-xs font-medium mt-0.5">{credentials}</p>
                   <p className="text-teal-600 font-medium text-sm mb-3">{role}</p>

@@ -3,6 +3,7 @@
  * Uses an Unsplash pharma-lab image via CSS background.
  */
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 import { Link }   from 'react-router-dom';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import pharmaLabBg from '../assets/images/Pharmaceutical-Lab-Setup.png';
@@ -17,7 +18,25 @@ const item = {
   show:   { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
 };
 
+const ROTATING_SERVICES = [
+  'Discovery Services',
+  'Development',
+  'Manufacturing',
+  'Specialty Chemicals',
+  'API Solutions',
+];
+
 export default function Hero() {
+  const [activeService, setActiveService] = useState(0);
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setActiveService((prev) => (prev + 1) % ROTATING_SERVICES.length);
+    }, 2200);
+
+    return () => window.clearInterval(timer);
+  }, []);
+
   return (
     <section
       className="relative min-h-screen flex items-center overflow-hidden"
@@ -55,10 +74,22 @@ export default function Hero() {
                 Delivering Trust.
               </motion.h1>
 
-              {/* Sub-heading */}
-              <motion.p variants={item} className="text-lg md:text-2xl text-blue-100 max-w-2xl mb-10 leading-relaxed text-left">
-                Pharmaceutical excellence. From molecule to patient certified, rigorously tested, consistently trusted.
-              </motion.p>
+              {/* Rotating hero message */}
+              <motion.div variants={item} className="max-w-3xl mb-10 text-left">
+                <p className="text-white font-heading font-semibold text-3xl sm:text-4xl lg:text-5xl leading-[1.02]">
+                  A Global Resource For
+                </p>
+                <motion.p
+                  key={ROTATING_SERVICES[activeService]}
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.35, ease: 'easeOut' }}
+                  className="mt-2 text-cyan-200 font-heading font-semibold text-3xl sm:text-4xl lg:text-5xl leading-[1.02] min-h-[1.2em]"
+                  aria-live="polite"
+                >
+                  {ROTATING_SERVICES[activeService]}
+                </motion.p>
+              </motion.div>
 
               {/* CTA buttons */}
               <motion.div variants={item} className="flex flex-col sm:flex-row gap-4">

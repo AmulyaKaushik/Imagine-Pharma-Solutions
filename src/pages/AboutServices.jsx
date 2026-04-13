@@ -5,6 +5,8 @@ import {
   FlaskConical, Briefcase, Atom, Leaf, CheckCircle2,
 } from 'lucide-react';
 import SectionTitle from '../components/SectionTitle';
+import drAshishPhoto from '../assets/images/Dr. Ashish Gupta.jpeg';
+import drAnujPhoto from '../assets/images/Dr. Anuj Kumar Rathi.jpeg';
 
 const PageWrapper = ({ children }) => (
   <motion.div
@@ -30,10 +32,17 @@ const DIRECTORS = [
     credentials: '(Ph.D. N.E.T. CSIR)',
     role: 'Co-Founder & Director - API Process Development and Manufacturing',
     phone: '+91 8800619561',
+    photo: drAshishPhoto,
     profile: [
-      'With over 20 years of extensive experience in Active Pharmaceutical Ingredient (API) synthesis, Dr. Ashish brings deep expertise in process development, route scouting, technology transfer, scale-up, and commercial manufacturing in the pharmaceutical industry.',
-      'He collaborates with pharmaceutical companies, CROs, CDMOs, and chemical manufacturers to develop robust, scalable, and cost-effective synthetic processes for APIs and complex intermediates.',
-      'He supports organizations in translating molecules from laboratory research to pilot and commercial-scale manufacturing while maintaining the highest standards of quality, safety, and regulatory compliance.',
+      'With over 20 years of extensive experience in Active Pharmaceutical Ingredient (API) synthesis, Dr. Ashish bring deep expertise in process development, route scouting, technology transfer, scale-up, and commercial manufacturing within the pharmaceutical industry.',
+      'Developed and optimized synthetic routes for a wide range of APIs and advanced intermediates',
+      'Ensured process efficiency, regulatory compliance,and cost-effective production',
+      'Extensive guidance for projects from early-stage development to commercial-scale manufacturing.',
+      'Extensive experience in Nitrosamine, genotoxic & process risk assessment, all types of impurities identification, synthesis, isolation & characterization in final APIs.',
+      'Developed novel synthetic routes for 25+ APIs.',
+      'Filed and been granted 35+ process patents, demonstrating strong innovation and technical leadership',
+      'Dr. Ashish collaborate with pharmaceutical companies, CROs, CDMOs, and chemical manufacturers to develop robust, scalable, and cost-effective synthetic processes. His expertise lies in designing efficient and regulatory-compliant routes for APIs and complex intermediates used across the pharmaceutical and specialty chemical industries.',
+      'Dr. Ashish support organizations in translating molecules from laboratory research to pilot and commercial-scale manufacturing, ensuring seamless scale-up while maintaining the highest standards of quality, safety, and regulatory compliance.',
     ],
   },
   {
@@ -41,10 +50,22 @@ const DIRECTORS = [
     credentials: '(Ph.D. PDF, MBA, Legal Consultant)',
     role: 'Co-Founder & Director - API R&D and Strategic Operations',
     phone: '+91 7042112854',
+    photo: drAnujPhoto,
     profile: [
-      'A seasoned research professional with 19 years of industrial experience in synthetic organic chemistry, specializing in API R&D, process development, and scale-up.',
-      'He has proven expertise in designing and optimizing synthetic routes, driving projects from laboratory to commercialization, and leading cross-functional teams.',
-      'He combines technical depth with strategic business acumen to deliver practical, cost-effective, science-driven, and regulatory-compliant solutions.',
+      'A seasoned research professional with 19 years of industrial experience in synthetic organic chemistry, specializing in API R&D, process development, and scale-up. Proven expertise in designing and optimizing synthetic routes, driving projects from laboratory to commercialization, and leading cross-functional teams.',
+      'Holds a Ph.D. in organic chemistry and Postdoctoral research in synthetic Organic chemistry, Flow chemistry and Catalysis (Europe) in along with an MBA in Operations & Marketing, combining strong technical expertise with strategic business acumen.',
+      'Dr. Anuj also holds a law degree, providing a solid foundation in regulatory affairs. This enables ensuring compliance, streamlining approvals, and aligning processes and documentation with pharmaceutical andchemical industry standards.',
+      'Synthetic Chemistry: R&D, process development, scaleup, and technology transfer.',
+      'Medicinal & Natural Product Chemistry',
+      'Drug Discovery & Development',
+      'Nano-catalysis, Flow Chemistry, Process Optimization &Route Scouting',
+      'API Development & Advanced Intermediat',
+      'Green Chemistry & Sustainable Process Development',
+      'Asymmetric Chemistry',
+      'Heterocyclic Chemistry & Complex Molecule Synthesis',
+      'Scale-Up & Commercial Manufacturing Support',
+      'Regulatory Compliance & Documentation (CMC Support)',
+      'Dr.Anuj committed to delivering practical, cost-effective,science-driven solutions with regulatory compliance for CROs, CDMOs, and other chemical manufacturers that enhance product quality, reduce development timelines.',
     ],
   },
 ];
@@ -104,7 +125,7 @@ const SERVICES = [
     color: 'from-blue-600 to-blue-800',
     desc: 'Experienced manufacturing and trading of high-quality APIs and pharmaceutical intermediates for domestic and global markets.',
     features: [
-      'GMP-compliant manufacturing',
+      'Certified manufacturing',
       'Rigorous quality testing',
       'Reliable and timely delivery',
     ],
@@ -229,12 +250,18 @@ export default function AboutServices() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionTitle title="Meet Our Directors" subtitle="Visionary leaders who bring decades of pharmaceutical expertise." />
           <div className="grid md:grid-cols-2 gap-8">
-            {DIRECTORS.map(({ name, credentials, role, phone, profile }, i) => (
+            {DIRECTORS.map(({ name, credentials, role, phone, photo, profile }, i) => (
               <motion.div
                 key={name}
                 {...fadeUp(i * 0.12)}
                 className="bg-white rounded-2xl shadow-lg border border-slate-100 p-6 hover:shadow-xl transition-shadow duration-300"
               >
+                <img
+                  src={photo}
+                  alt={name}
+                  className="w-full h-64 object-contain object-top rounded-xl mb-4 bg-slate-50"
+                  loading="lazy"
+                />
                 <h3 className="font-heading font-bold text-xl text-primary-900">{name}</h3>
                 <p className="text-slate-500 text-xs font-medium mt-0.5">{credentials}</p>
                 <p className="text-teal-600 font-medium text-sm mb-3">{role}</p>
