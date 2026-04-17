@@ -168,12 +168,16 @@ export default function About() {
                 className="bg-white rounded-2xl shadow-lg border border-slate-100 p-6 hover:shadow-xl transition-shadow duration-300"
               >
                 <div>
-                  <img
-                    src={photo}
-                    alt={name}
-                    className="w-full h-64 object-contain object-top rounded-xl mb-4 bg-slate-50"
-                    loading="lazy"
-                  />
+                  <div className="flex justify-center mb-4">
+                    <div className="w-56 h-56 rounded-full overflow-hidden bg-white shadow-[0_0_0_6px_#000]">
+                      <div
+                        role="img"
+                        aria-label={name}
+                        className="w-full h-full rounded-full bg-cover bg-top scale-[1.02]"
+                        style={{ backgroundImage: `url(${photo})` }}
+                      />
+                    </div>
+                  </div>
                   <h3 className="font-heading font-bold text-xl text-primary-900">{name}</h3>
                   <p className="text-slate-500 text-xs font-medium mt-0.5">{credentials}</p>
                   <p className="text-teal-600 font-medium text-sm mb-3">{role}</p>
